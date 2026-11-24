@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Order Form</h2>
+
+    <p>Product: {{ product[1] }}</p>
+    <p>Price: ₹{{ product[2] }}</p>
+
+    <form method="POST">
+
+        Customer Name:
+        <input type="text" name="name" required>
+
+        Quantity:
+        <input type="number" name="quantity" min="1" step="1" required>
+
+        <button type="submit">Place Order</button>
+
+    </form>
+
+</div>
+
+{% endblock %}

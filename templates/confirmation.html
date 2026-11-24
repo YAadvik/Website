@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Order Confirmation</h2>
+
+    <p>Order ID: {{ order[0] }}</p>
+    <p>Customer Name: {{ order[1] }}</p>
+    <p>Product Name: {{ order[2] }}</p>
+    <p>Quantity: {{ order[3] }}</p>
+    <p>Price: ₹{{ order[4] }}</p>
+    <p>Total Amount: ₹{{ total }}</p>
+
+    <h3>Your order has been placed successfully!</h3>
+
+    <a href="{{ url_for('home') }}">Continue Shopping</a>
+
+</div>
+
+{% endblock %}
